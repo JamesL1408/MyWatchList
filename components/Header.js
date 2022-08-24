@@ -22,7 +22,7 @@ function Header() {
     <div>
       {/* Hamburger Menu */}
         <div id='menu' className=' 600pix:hidden absolute h-screen w-full bg-white z-50 top-0 left-0
-        flex flex-col items-center justify-start py-[100px] '>
+        flex flex-col items-center justify-start py-[100px] -translate-y-full '>
           <div className='relative h-[120px] w-[120px] rounded-full mb-5'>
             <Image src={PP} layout='fill' className='rounded-full'/>
           </div>
