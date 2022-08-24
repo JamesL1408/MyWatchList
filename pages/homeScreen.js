@@ -58,7 +58,7 @@ function homeScreen() {
         <Header/>
 
         <main className='flex pt-[60px] h-screen w-full'>
-          <section className=' bg-white z-20 border-r border-gray-200 hidden 600pix:flex flex-col items-center py-2 min-w-[150px]'>
+          <section className=' bg-white z-10 border-r border-gray-200 hidden 600pix:flex flex-col items-center py-2 min-w-[150px]'>
             <div className='flex flex-col space-y-2 items-center justify-center mt-[70px]'>
                 <div className=' relative h-[100px] w-[100px] rounded-full'>
                 <Image src={PP} layout='fill' className='rounded-full' />
@@ -83,11 +83,11 @@ function homeScreen() {
             <h1 className='text-2xl font-Montserrat mt-6 ml-3 font-semibold'>New Releases</h1>
 
             <div className='flex items-center justify-center space-x-2 absolute right-5 top-[175px]'>
-              <svg onClick={slideLeftReleases} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9" fill="none"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg onClick={slideLeftReleases} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9 cursor-pointer" fill="none"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
             </svg>
 
-            <svg onClick={slideRightReleases} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg onClick={slideRightReleases} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             </div>
@@ -113,11 +113,11 @@ function homeScreen() {
 
             <div className='mt-8 w-full  relative  '>
               <div className='flex 900pix:hidden items-center justify-center space-x-2 absolute right-5 top-0'>
-              <svg onClick={slideLeftWatch} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9" fill="none"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <svg onClick={slideLeftWatch} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9 cursor-pointer" fill="none"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
               <path stroke-linecap="round" stroke-linejoin="round" d="M11 15l-3-3m0 0l3-3m-3 3h8M3 12a9 9 0 1118 0 9 9 0 01-18 0z" />
             </svg>
 
-            <svg onClick={slideRightWatch} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <svg onClick={slideRightWatch} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
             </div>
@@ -127,12 +127,12 @@ function homeScreen() {
                   <div className='text-xl px-3'>Your watchlist is empty, check out the new releases!</div>
                 )}
 
-                <div className='hidden 900pix:flex items-center justify-center w-full overflow-y-scroll '>
-                <div className='grid grid-cols-1 900pix:grid-cols-2 1300pix:grid-cols-3 1550pix:grid-cols-4 gap-y-3 gap-x-6'>
+                <div className='hidden 900pix:flex items-start justify-center w-full  max-h-[300px] overflow-y-scroll scrollbar-hide '>
+                <div className='grid grid-cols-1 900pix:grid-cols-2 1300pix:grid-cols-3 1550pix:grid-cols-4 gap-y-3 gap-x-6 py-5'>
                   {watchlist.map((val)=>{
                     return(
                       <div key={val.id}>
-                        <WatchListCard Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id}/>
+                        <WatchListCard Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Date={val.date}/>
                       </div>
                     )
                   })}
@@ -144,7 +144,7 @@ function homeScreen() {
                   {watchlist.map((val)=>{
                     return(
                       <div className='inline-block text-center p-3 snap-start' key={val.id}>
-                        <WatchListCardSquare Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Company={val.company}/>
+                        <WatchListCardSquare Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Company={val.company} Date={val.date}/>
                       </div>
                     )
                   })}

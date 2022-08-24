@@ -1,14 +1,14 @@
 import LionKing from '../public/LionKing.jpg'
-import StarWars from '../public/StarWars.jpeg'
+import StarWars from '../public/StarWars.png'
 import Avengers from '../public/Avengers.webp'
 import Deadpool from '../public/Deadpool.jpg'
-import JohnWick from '../public/JohnWick.jpg'
-import MrMrsSmith from '../public/MrMrsSmith.webp'
+import JohnWick from '../public/johnWick.png'
+import MrMrsSmith from '../public/mrMrsSmith.jpg'
 import Avatar2 from '../public/Avatar2.jpg'
-import Transformers from '../public/Transformers3.webp' 
-import WoW from '../public/WoW.jpg'
-import Spiderman from '../public/Spiderman.webp'
-import Interstellar from '../public/Interstellar.jpg'
+import Transformers from '../public/optimus.png' 
+import WoW from '../public/wolfOfWallStreet.png'
+import Spiderman from '../public/spiderman.png'
+import Interstellar from '../public/interstellar.png'
 import Dune from '../public/Dune.jpg'
 
 
@@ -89,7 +89,7 @@ export const data = [
         "id":9,
         "company":"Red Granite Pictures",
         "date":"2013",
-        "title":"The Wolf of Wolves Street",
+        "title":"The Wolf of Wall Street",
         "desc":"Desc 9",
         "stars":4,
         "image":WoW,
