@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 
 import { useSelector, useDispatch } from 'react-redux';
-import { increment } from '../pages/features/counter/counterSlice'
+import { increment } from '../features/counter/counterSlice'
 
 function WatchListCardSquare({Img,Title,Duration,Stars,Id,Company}) {
   const count = useSelector((state)=>state.counter.count);

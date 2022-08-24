@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image'
 
 import { useSelector, useDispatch } from 'react-redux';
-import { increment } from '../pages/features/counter/counterSlice'
+import { increment } from '../features/counter/counterSlice'
 
 function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
     const count = useSelector((state)=>state.counter.count);
