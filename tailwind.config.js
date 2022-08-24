@@ -5,7 +5,20 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        Montserrat : "'Montserrat',sans-serif",
+      },
+      screens:{
+        '600pix':'600px',
+        '800pix':'800px',
+        '900pix':'900px',
+        '1300pix':'1300px',
+        '1550pix':'1550px',
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide'), 
+  ],
 }
