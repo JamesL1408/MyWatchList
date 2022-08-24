@@ -1,5 +1,5 @@
 import LionKing from '../public/LionKing.jpg'
-import StarWars from '../public/StarWars.png'
+import StarWars from '../public/starWars.png'
 import Avengers from '../public/Avengers.webp'
 import Deadpool from '../public/Deadpool.jpg'
 import JohnWick from '../public/johnWick.png'
