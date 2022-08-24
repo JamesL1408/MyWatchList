@@ -63,10 +63,10 @@ function homeScreen() {
                 <div className=' relative h-[100px] w-[100px] rounded-full'>
                 <Image src={PP} layout='fill' className='rounded-full' />
             </div>
-            <h1 className='font-medium'>James</h1>
+            <h1 className='font-semibold font-Montserrat text-lg'>James</h1>
             </div>
             <div className='w-full h-[1px] bg-black mt-10'></div>
-            <h1 className='my-[6px] '>Home</h1>
+            <h1 className='my-[6px] font-medium '>Home</h1>
             <div className='w-full h-[1px] bg-black'></div>
         </section>
 
