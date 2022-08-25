@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { increment } from '../features/counter/counterSlice'
 import playButton from '../public/playButton.png'
+
+AOS.init();
 
 function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
     const count = useSelector((state)=>state.counter.count);
@@ -23,9 +27,9 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
   return (
     <>
     {isPressed===true && (
-                <div className='absolute z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
-                <div className='flex w-full h-[200px] bg-gray-600'>
-                    <div className='min-w-[200px] h-full relative'>
+                <div data-aos='zoom-in' className='absolute z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
+                <div className='flex w-full h-[180px] bg-gray-600'>
+                    <div className='min-w-[180px] h-full relative'>
                         <Image src={Img} layout='fill' objectFit='fill'/>
                     </div>
                     <div className='flex-grow h-full max-w-[700px] flex items-center justify-center bg-black '>
@@ -43,17 +47,17 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae est illo dolorum enim, nihil doloribus voluptates libero perspiciatis in officiis deserunt quis, voluptas alias possimus!
                     </div>
                 </div>
-                <div className='flex flex-col w-full p-3 space-y-3'>
+                <div className='flex flex-col w-full p-3 space-y-1'>
                     <div className='flex items-center justify-start space-x-2 '>
-                        <h2 className='text-2xl font-medium min-w-[95px] text-left'>Director: </h2>
+                        <h2 className='text-xl font-medium min-w-[95px] text-left'>Director: </h2>
                         <p className='text-left whitespace-normal'>kjhbs fdskj</p>
                     </div>
                     <div className='flex justify-start space-x-2 '>
-                        <h2 className='text-2xl font-medium min-w-[95px] text-left'>Writers: </h2>
+                        <h2 className='text-xl font-medium min-w-[95px] text-left'>Writers: </h2>
                         <p className='whitespace-normal text-left'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolores.</p>
                     </div>
                     <div className='flex  justify-start space-x-2 '>
-                        <h2 className='text-2xl font-medium min-w-[95px] text-left'>Stars: </h2>
+                        <h2 className='text-xl font-medium min-w-[95px] text-left'>Stars: </h2>
                         <p className='whitespace-normal text-left flex-grow'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, dolores.</p>
                     </div>
                 </div>
