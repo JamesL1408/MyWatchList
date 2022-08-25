@@ -15,6 +15,9 @@ import PulpFiction from '../public/pulpFiction.png'
 import TheGodfather from '../public/theGodfather.png'
 import Kong from '../public/kong.png'
 import Inception from '../public/inception.png'
+import Rata from '../public/rata.png'
+import HarryPotter from '../public/harryPotter.png'
+import Ted from '../public/ted.png'
 
 
 export const data = [
@@ -171,4 +174,31 @@ export const data = [
         "stars":5,
         "image":Inception,
     },
+    {
+        "id":18,
+        "company":"Walt Disney",
+        "date":"2010",
+        "title":"Ratatouille",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rerum nam eaque harum at voluptatem ab. Repudiandae qui soluta quasi ab eveniet impedit quidem exercitationem.",
+        "stars":4,
+        "image":Rata,
+    },
+    {
+        "id":19,
+        "company":"Warner Bros",
+        "date":"2011",
+        "title":"Harry Potter",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rerum nam eaque harum at voluptatem ab. Repudiandae qui soluta quasi ab eveniet impedit quidem exercitationem.",
+        "stars":5,
+        "image":HarryPotter,
+    },
+    {
+        "id":20,
+        "company":"Universal Pictures",
+        "date":"2012",
+        "title":"Ted",
+        "desc":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rerum nam eaque harum at voluptatem ab. Repudiandae qui soluta quasi ab eveniet impedit quidem exercitationem.",
+        "stars":4,
+        "image":Ted,
+    },    
 ]
