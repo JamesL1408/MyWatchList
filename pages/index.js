@@ -10,7 +10,7 @@ const Home = () => {
     const user = document.getElementById('username').value;
     const pass = document.getElementById('password').value;
     if(user === USERNAME && pass === PASSWORD){
-      location.href = 'http://localhost:3000/homeScreen'
+      location.href = '/homeScreen'
     }else{
       alert("Incorrect Username or Password")
     }
