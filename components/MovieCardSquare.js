@@ -26,11 +26,11 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
     <>
     {isPressed===true && (
                 <div data-aos='zoom-in' className='absolute z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
-                <div className='flex w-full h-[180px] bg-gray-600'>
+                <div className='flex w-full h-[180px] '>
                     <div className='min-w-[180px] h-full relative'>
                         <Image src={Img} layout='fill' objectFit='fill'/>
                     </div>
-                    <div className='flex-grow h-full max-w-[800px] flex items-center justify-center bg-black '>
+                    <div className='flex-grow h-full flex items-center justify-center bg-black '>
                         <div className='h-[50px] w-[50px] relative'>
                             <Image src={playButton} layout='fill' objectFit='contain'/>                           
                         </div>

@@ -3,7 +3,6 @@ import Image from 'next/image';
 import PP from '../public/profileImage.jpg'
 
 function Header() {
-  if(typeof window==='object'){
 
     const menuBtn = document.getElementById('menuBtn');
     const menu = document.getElementById('menu');
@@ -11,8 +10,6 @@ function Header() {
     menuBtn.addEventListener("click",()=>{
       menu.classList.toggle("-translate-y-full");
     })
-  
-  }
 
   return (
     <div>
