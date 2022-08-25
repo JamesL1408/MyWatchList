@@ -73,14 +73,14 @@ function homeScreen() {
         <section className='h-full flex flex-col z-10 flex-grow items-start overflow-hidden '>
 
             <div className='flex flex-col mt-8 ml-3 space-y-1'>
-              <h1 className='text-2xl font-Montserrat font-semibold'>Looking for something?</h1>
+              <h1 className='text-xl font-Montserrat font-semibold'>Looking for something?</h1>
               <input onChange={(event)=>{
                 setSearchTerm(event.target.value);
               }} 
               type="search" name="" id="" placeholder='Search movies' className='border border-black border-opacity-70 px-1 rounded-md w-[300px] outline-none' />
             </div>
 
-            <h1 className='text-2xl font-Montserrat mt-6 ml-3 font-semibold'>New Releases</h1>
+            <h1 className='text-xl font-Montserrat mt-6 ml-3 font-semibold'>New Releases</h1>
 
             <div className='flex items-center justify-center space-x-2 absolute right-5 top-[175px]'>
               <svg onClick={slideLeftReleases} xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 600pix:h-9 600pix:w-9 cursor-pointer" fill="none"  viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -122,12 +122,12 @@ function homeScreen() {
             </svg>
             </div>
 
-                <h1 className='text-2xl font-Montserrat mb-4 font-semibold ml-3'>Watchlist</h1>
+                <h1 className='text-xl font-Montserrat mb-4 font-semibold ml-3'>Watchlist</h1>
                 {watchlist.length===0 && (
                   <div className='text-xl px-3'>Your watchlist is empty, check out the new releases!</div>
                 )}
 
-                <div className='hidden 900pix:flex items-start justify-center w-full  max-h-[300px] overflow-y-scroll scrollbar-hide '>
+                <div className='hidden 900pix:flex items-start justify-center w-full  max-h-[200px] overflow-y-scroll scrollbar-hide '>
                 <div className='grid grid-cols-1 900pix:grid-cols-2 1300pix:grid-cols-3 1550pix:grid-cols-4 gap-y-3 gap-x-6 py-5'>
                   {watchlist.map((val)=>{
                     return(

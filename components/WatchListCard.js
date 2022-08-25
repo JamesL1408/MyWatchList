@@ -101,7 +101,7 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date}) {
                 
 
 
-                <button className='absolute top-[70px] right-3' onClick={()=>{
+                <button className='absolute top-[70px] right-3 600pix:right-6 800pix:right-8 1300pix:right-10' onClick={()=>{
                     setIsPressed(!isPressed);
                     console.log(isPressed)
                 }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">

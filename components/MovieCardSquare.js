@@ -24,17 +24,17 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
     <>
     {isPressed===true && (
                 <div className='absolute z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
-                <div className='flex w-full h-[200px] bg-black'>
+                <div className='flex w-full h-[200px] bg-gray-600'>
                     <div className='min-w-[200px] h-full relative'>
                         <Image src={Img} layout='fill' objectFit='fill'/>
                     </div>
-                    <div className='flex-grow h-full flex items-center justify-center  '>
+                    <div className='flex-grow h-full max-w-[700px] flex items-center justify-center bg-black '>
                         <div className='h-[50px] w-[50px] relative'>
                             <Image src={playButton} layout='fill' objectFit='contain'/>                           
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col w-full h-[200px]  p-3 pt-4 whitespace-normal space-y-2'>
+                <div className='flex flex-col w-full  px-3 pt-4 whitespace-normal space-y-2'>
                     <div className='flex w-full '>
                         <h1 className='text-3xl font-Montserrat font-medium flex-grow text-left'>{Title}</h1>
                         <h1 className='text-2xl font-Montserrat'>{'('}{Date}{')'}</h1>
@@ -101,7 +101,7 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                 
 
 
-                <button className='absolute top-[70px] right-3' onClick={()=>{
+                <button className='absolute top-[70px] right-3 600pix:right-6 800pix:right-8 1300pix:right-10' onClick={()=>{
                     setIsPressed(!isPressed);
                     console.log(isPressed)
                 }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">
@@ -111,15 +111,15 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                 </div>
                 )}
     
-    <div className='h-[140px] w-[140px] 600pix:h-[200px] 600pix:w-[200px] relative rounded-md cursor-pointer group z-20 shadow-sm shadow-gray-500 '>
+    <div className='h-[140px] w-[140px] 600pix:h-[160px] 600pix:w-[160px] relative rounded-md cursor-pointer group z-20 shadow-sm shadow-gray-500 '>
         <div className='relative top-0 left-0 h-full w-full z-20'>
             <Image src={Img} layout='fill' objectFit='fill' className='rounded-md'/>
 
         </div>
         <div className='absolute bottom-0 left-0 opacity-0 w-full h-full group-hover:opacity-75 transition-all duration-300 ease-in-out rounded-md bg-black z-20'></div>
-        <button className='absolute bottom-0 opacity-0 left-0 w-full h-full group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col px-3 py-3  rounded-md bg-transparent z-40 text-white items-center justify-start '>
+        <button className='absolute bottom-0 opacity-0 left-0 w-full h-full group-hover:opacity-100 transition-all duration-300 ease-in-out flex flex-col px-3 py-3 rounded-md bg-transparent z-40 text-white items-center justify-start '>
             <h1 className='text-sm'>{Company}</h1>
-            <h1 className='text-lg mt-2 600pix:mt-10 whitespace-normal leading-[16px]'>{Title}</h1>
+            <h1 className='text-lg mt-2 600pix:mt-5 whitespace-normal leading-[16px]'>{Title}</h1>
             <h2 className='flex'>{Array(Stars).fill(0).map((_,i) => (
                 <svg key={i} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mt-1 w-4 h-4 600pix:w-5 600pix:h-5">
                 <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z" clip-rule="evenodd" />
