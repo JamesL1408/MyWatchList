@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment } from '../features/counter/counterSlice'
 import playButton from '../public/playButton.png'
 
-function WatchListCard({Img,Title,Duration,Stars,Id,Date}) {
+function WatchListCard({Img,Title,Duration,Stars,Id,Date,Desc}) {
     const count = useSelector((state)=>state.counter.count);
     const dispatch = useDispatch();
 
@@ -35,8 +35,8 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date}) {
                     </div>
                 </div>
                 <div className='flex flex-col w-full h-[200px]  p-3 pt-4 whitespace-normal space-y-2'>
-                    <div className='flex w-full '>
-                        <h1 className='text-3xl font-Montserrat font-medium flex-grow text-left'>{Title}</h1>
+                    <div className='flex w-full items-center 900pix:space-x-3 '>
+                        <h1 className='text-3xl font-Montserrat font-medium flex-grow 900pix:flex-grow-0  text-left'>{Title}</h1>
                         <h1 className='text-2xl font-Montserrat'>{'('}{Date}{')'}</h1>
                     </div>
                     <div className='w-full text-start whitespace-normal'>
@@ -59,7 +59,7 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date}) {
                 </div>
 
                 {!checkFilms() && (
-                    <div className='absolute bottom-0 left-0 w-full h-[60px] '>
+                    <div className='absolute bottom-0 left-0 w-full h-[60px] 900pix:right-9 900pix:left-auto 900pix:top-[270px] 900pix:w-[260px] 900pix:h-[40px] rounded-sm '>
                     <button onClick={()=>{
                 var existingEntries = JSON.parse(localStorage.getItem("watchlist"));
                 if(existingEntries==null) existingEntries = [];
@@ -85,7 +85,7 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date}) {
                 )}
 
                 {checkFilms()==1 && (
-                    <div className='absolute bottom-0 left-0 w-full h-[60px] '>
+                    <div className='absolute bottom-0 left-0 w-full h-[60px] 900pix:right-9 900pix:left-auto 900pix:top-[270px] 900pix:w-[260px] 900pix:h-[40px] rounded-sm'>
                     <button  onClick={()=>{
                     var existingEntries = JSON.parse(localStorage.getItem("watchlist"));
                     if(existingEntries==null) return;

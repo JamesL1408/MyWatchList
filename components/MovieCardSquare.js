@@ -1,18 +1,16 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { increment } from '../features/counter/counterSlice'
 import playButton from '../public/playButton.png'
 
-AOS.init();
 
 function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
     const count = useSelector((state)=>state.counter.count);
     const dispatch = useDispatch();
-    const [isPressed,setIsPressed]= useState(false);
+    const [isPressed,setIsPressed]= useState(false); 
+
 
     function checkFilms(){
         var existingEntries=JSON.parse(localStorage.getItem("watchlist"));
@@ -32,19 +30,19 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                     <div className='min-w-[180px] h-full relative'>
                         <Image src={Img} layout='fill' objectFit='fill'/>
                     </div>
-                    <div className='flex-grow h-full max-w-[700px] flex items-center justify-center bg-black '>
+                    <div className='flex-grow h-full max-w-[800px] flex items-center justify-center bg-black '>
                         <div className='h-[50px] w-[50px] relative'>
                             <Image src={playButton} layout='fill' objectFit='contain'/>                           
                         </div>
                     </div>
                 </div>
                 <div className='flex flex-col w-full  px-3 pt-4 whitespace-normal space-y-2'>
-                    <div className='flex w-full '>
-                        <h1 className='text-3xl font-Montserrat font-medium flex-grow text-left'>{Title}</h1>
+                    <div className='flex w-full items-center 900pix:space-x-3 '>
+                        <h1 className='text-3xl font-Montserrat font-medium flex-grow 900pix:flex-grow-0  text-left'>{Title}</h1>
                         <h1 className='text-2xl font-Montserrat'>{'('}{Date}{')'}</h1>
                     </div>
                     <div className='w-full text-start whitespace-normal'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae est illo dolorum enim, nihil doloribus voluptates libero perspiciatis in officiis deserunt quis, voluptas alias possimus!
+                        {Desc}
                     </div>
                 </div>
                 <div className='flex flex-col w-full p-3 space-y-1'>
@@ -63,7 +61,7 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                 </div>
 
                 {!checkFilms() && (
-                    <div className='absolute bottom-0 left-0 w-full h-[60px] '>
+                    <div className='absolute bottom-0 left-0 w-full h-[60px] 900pix:right-9 900pix:left-auto 900pix:top-[250px] 900pix:w-[260px] 900pix:h-[40px] 900pix:rounded-md '>
                     <button onClick={()=>{
                 var existingEntries = JSON.parse(localStorage.getItem("watchlist"));
                 if(existingEntries==null) existingEntries = [];
@@ -89,7 +87,7 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                 )}
 
                 {checkFilms()==1 && (
-                    <div className='absolute bottom-0 left-0 w-full h-[60px] '>
+                    <div className='absolute bottom-0 left-0 w-full h-[60px] 900pix:right-9 900pix:left-auto 900pix:top-[250px] 900pix:w-[260px] 900pix:h-[40px] rounded-sm '>
                     <button  onClick={()=>{
                     var existingEntries = JSON.parse(localStorage.getItem("watchlist"));
                     if(existingEntries==null) return;

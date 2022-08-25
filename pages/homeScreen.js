@@ -23,6 +23,18 @@ function homeScreen() {
     setWatchlist(entries);
   },[count])
 
+  function compare(a,b){
+    if(a.date > b.date){
+      return -1;
+    }
+    if(a.date<b.date){
+      return 1;
+    }
+    return 0;
+  }
+
+  var sortedData = data.sort(compare);
+
   const slideLeftReleases = () =>{
     var slider = document.getElementById('slider');
     slider.scrollLeft = slider.scrollLeft-400;
@@ -132,7 +144,7 @@ function homeScreen() {
                   {watchlist.map((val)=>{
                     return(
                       <div key={val.id}>
-                        <WatchListCard Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Date={val.date}/>
+                        <WatchListCard Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Date={val.date} Desc={val.desc}/>
                       </div>
                     )
                   })}
@@ -144,7 +156,7 @@ function homeScreen() {
                   {watchlist.map((val)=>{
                     return(
                       <div className='inline-block text-center p-3 snap-start' key={val.id}>
-                        <WatchListCardSquare Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Company={val.company} Date={val.date}/>
+                        <WatchListCardSquare Title={val.title} Duration={"110min"} Img={val.image} Stars={val.stars} Id={val.id} Company={val.company} Date={val.date} Desc={val.desc}/>
                       </div>
                     )
                   })}
