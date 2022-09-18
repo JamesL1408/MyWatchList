@@ -9,8 +9,6 @@ function Header() {
 
   return (
     <div>
-
-      
       {/* Hamburger Menu */}      
         <div className={` 600pix:hidden absolute h-screen w-full bg-white z-50 top-0 left-0
         flex flex-col items-center justify-start py-[100px] ${menuToggle ? 'translate-y-0' : '-translate-y-full'} transition-all duration-500 ease-in-out`}>
@@ -26,9 +24,20 @@ function Header() {
         <button onClick={()=>{
           setMenuToggle(!menuToggle);
         }} className=' flex 600pix:hidden items-center justify-center absolute left-4 top-[14px]'>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
+          {
+            !menuToggle && (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )
+          }
+          {
+            menuToggle && (
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            )
+          }
         </button>
 
         <a className='flex 600pix:hidden items-center justify-center absolute right-4 top-[14px]' href="/">
