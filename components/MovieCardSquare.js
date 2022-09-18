@@ -28,11 +28,11 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
                 <div data-aos='zoom-in' className='absolute z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
                 <div className='flex w-full h-[180px] '>
                     <div className='min-w-[180px] h-full relative'>
-                        <Image src={Img} layout='fill' objectFit='fill'/>
+                        <Image priority src={Img} layout='fill' objectFit='fill'/>
                     </div>
                     <div className='flex-grow h-full flex items-center justify-center bg-black '>
                         <div className='h-[50px] w-[50px] relative'>
-                            <Image src={playButton} layout='fill' objectFit='contain'/>                           
+                            <Image priority src={playButton} layout='fill' objectFit='contain'/>                           
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ function MovieCardSquare({Img,Title,Desc,Stars,Company,Date,Id}) {
     
     <div className='h-[140px] w-[140px] 600pix:h-[160px] 600pix:w-[160px] relative rounded-md cursor-pointer group z-20 shadow-sm shadow-gray-500 '>
         <div className='relative top-0 left-0 h-full w-full z-20'>
-            <Image src={Img} layout='fill' objectFit='fill' className='rounded-md'/>
+            <Image priority src={Img} layout='fill' objectFit='fill' className='rounded-md'/>
 
         </div>
         <div className='absolute bottom-0 left-0 opacity-0 w-full h-full group-hover:opacity-75 transition-all duration-300 ease-in-out rounded-md bg-black z-20'></div>

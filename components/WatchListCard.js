@@ -26,11 +26,11 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date,Desc}) {
                 <div className='fixed z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
                 <div className='flex w-full h-[200px] bg-black'>
                     <div className='min-w-[200px] h-full relative'>
-                        <Image src={Img} layout='fill' objectFit='fill'/>
+                        <Image priority src={Img} layout='fill' objectFit='fill'/>
                     </div>
                     <div className='flex-grow h-full flex items-center justify-center  '>
                         <div className='h-[50px] w-[50px] relative'>
-                            <Image src={playButton} layout='fill' objectFit='contain'/>                           
+                            <Image priority src={playButton} layout='fill' objectFit='contain'/>                           
                         </div>
                     </div>
                 </div>
@@ -87,7 +87,7 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date,Desc}) {
     
         <div className='relative h-[100px] w-[340px] border border-black border-opacity-80 rounded-md shadow-sm shadow-gray-500 '>
             <div className='absolute h-[98px] w-[100px] top-0 left-0 rounded-l-md'>
-                <Image src={Img} layout='fill' className='rounded-l-md'/>
+                <Image priority src={Img} layout='fill' className='rounded-l-md'/>
             </div>
             <h1 className='absolute top-[15px] left-[120px] font-medium text-lg max-w-[180px] leading-5'>{Title}</h1>
             <div className='flex space-x-1 items-center justify-center absolute bottom-[20px] left-[120px]'>

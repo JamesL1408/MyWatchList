@@ -27,11 +27,11 @@ function WatchListCardSquare({Img,Title,Duration,Stars,Id,Company,Date,Desc}) {
                 <div className='fixed z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
                 <div className='flex w-full h-[200px] bg-black'>
                     <div className='min-w-[200px] h-full relative'>
-                        <Image src={Img} layout='fill' objectFit='fill'/>
+                        <Image priority src={Img} layout='fill' objectFit='fill'/>
                     </div>
                     <div className='flex-grow h-full flex items-center justify-center  '>
                         <div className='h-[50px] w-[50px] relative'>
-                            <Image src={playButton} layout='fill' objectFit='contain'/>                           
+                            <Image priority src={playButton} layout='fill' objectFit='contain'/>                           
                         </div>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ function WatchListCardSquare({Img,Title,Duration,Stars,Id,Company,Date,Desc}) {
 
       <div className='h-[140px] w-[140px] 600pix:h-[160px]  600pix:w-[160px] relative  rounded-md cursor-pointer  group'>
           <div className='relative top-0 left-0 h-full w-full z-20'>
-              <Image src={Img} layout='fill' className='rounded-md'/>
+              <Image priority src={Img} layout='fill' className='rounded-md'/>
 
           </div>
           <div className='absolute bottom-0 left-0 opacity-0 w-full h-full group-hover:opacity-75 transition-all duration-300 ease-in-out rounded-md bg-black z-20'></div>

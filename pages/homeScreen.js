@@ -73,7 +73,7 @@ function homeScreen() {
           <section className=' bg-white z-10 border-r border-gray-200 hidden 600pix:flex flex-col items-center py-2 min-w-[150px]'>
             <div className='flex flex-col space-y-2 items-center justify-center mt-[70px]'>
                 <div className=' relative h-[100px] w-[100px] rounded-full'>
-                <Image src={PP} layout='fill' className='rounded-full' />
+                <Image priority src={PP} layout='fill' className='rounded-full' />
             </div>
             <h1 className='font-semibold font-Montserrat text-lg'>James</h1>
             </div>
