@@ -58,31 +58,6 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date,Desc}) {
                     </div>
                 </div>
 
-                {!checkFilms() && (
-                    <div className='absolute bottom-0 left-0 w-full h-[60px] 900pix:right-9 900pix:left-auto 900pix:top-[270px] 900pix:w-[260px] 900pix:h-[40px] rounded-sm '>
-                    <button onClick={()=>{
-                var existingEntries = JSON.parse(localStorage.getItem("watchlist"));
-                if(existingEntries==null) existingEntries = [];
-                var entry = {
-                    "id":Id,
-                    "company":Company,
-                    "date":Date,
-                    "title":Title,
-                    "desc":Desc,
-                    "stars":Stars,
-                    "image":Img,
-                };
-                
-                localStorage.setItem("entry",JSON.stringify(entry));
-                existingEntries.push(entry);
-                localStorage.setItem("watchlist",JSON.stringify(existingEntries));
-                dispatch(increment());
-            }} 
-            className='w-full h-full text-xl font-Montserrat font-medium border border-black bg-green-500'>
-                        Add to Watchlist
-                    </button>
-                </div>
-                )}
 
                 {checkFilms()==1 && (
                     <div className='absolute bottom-0 left-0 w-full h-[60px] 900pix:right-9 900pix:left-auto 900pix:top-[270px] 900pix:w-[260px] 900pix:h-[40px] rounded-sm'>
@@ -98,11 +73,10 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date,Desc}) {
                     </button>
                 </div>
                 )}
-                
-
 
                 <button className='absolute top-[70px] right-3 600pix:right-6 800pix:right-8 1300pix:right-10' onClick={()=>{
                     setIsPressed(!isPressed);
+                    dispatch(increment());
                     console.log(isPressed)
                 }}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 text-white">
                 <path fill-rule="evenodd" d="M2.515 10.674a1.875 1.875 0 000 2.652L8.89 19.7c.352.351.829.549 1.326.549H19.5a3 3 0 003-3V6.75a3 3 0 00-3-3h-9.284c-.497 0-.974.198-1.326.55l-6.375 6.374zM12.53 9.22a.75.75 0 10-1.06 1.06L13.19 12l-1.72 1.72a.75.75 0 101.06 1.06l1.72-1.72 1.72 1.72a.75.75 0 101.06-1.06L15.31 12l1.72-1.72a.75.75 0 10-1.06-1.06l-1.72 1.72-1.72-1.72z" clip-rule="evenodd" />

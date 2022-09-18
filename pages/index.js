@@ -45,7 +45,7 @@ const Home = () => {
           Login
         </button>
       </div>
-      <div className='flex space-x-1 absolute bottom-4 left-1/2 -translate-x-1/2'>
+      <div className='flex flex-col 600pix:flex-row space-x-1 absolute bottom-4 left-1/2 -translate-x-1/2 items-center'>
         <h2>Don't have an account?</h2>
         <a className='hover:underline hover:text-blue-600' href="">Register here</a>
       </div>
