@@ -23,7 +23,7 @@ function WatchListCard({Img,Title,Duration,Stars,Id,Date,Desc}) {
   return (
     <>
         {isPressed===true && (
-                <div className='fixed z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-white'>
+                <div className='fixed z-50 pt-[60px] top-0 right-0 bottom-0 left-0 h-full w-full flex flex-col items-center justify-start cursor-default bg-black bg-opacity-95'>
                 <div className='flex w-full h-[200px] bg-black'>
                     <div className='min-w-[200px] h-full relative'>
                         <Image priority src={Img} layout='fill' objectFit='fill'/>

@@ -57,7 +57,7 @@ function homeScreen() {
 
 
   return (
-    <div className='h-screen  '>
+    <div className='h-screen bg-black bg-opacity-95 text-white  '>
         <Head>
             <title>MyWatchList - Home</title>
             <link rel="icon" href="/movieReel.ico" />
@@ -70,16 +70,16 @@ function homeScreen() {
         <Header/>
 
         <main className='flex pt-[60px] h-screen w-full'>
-          <section className=' bg-white z-10 border-r border-gray-200 hidden 600pix:flex flex-col items-center py-2 min-w-[150px]'>
+          <section className=' bg-black bg-opacity-95 z-10 border-r border-gray-600 hidden 600pix:flex flex-col items-center py-2 min-w-[150px]'>
             <div className='flex flex-col space-y-2 items-center justify-center mt-[70px]'>
                 <div className=' relative h-[100px] w-[100px] rounded-full'>
                 <Image priority src={PP} layout='fill' className='rounded-full' />
             </div>
             <h1 className='font-semibold font-Montserrat text-lg'>James</h1>
             </div>
-            <div className='w-full h-[1px] bg-black mt-10'></div>
+            <div className='w-full h-[1px] bg-gray-600 mt-10'></div>
             <h1 className='my-[6px] font-medium '>Home</h1>
-            <div className='w-full h-[1px] bg-black'></div>
+            <div className='w-full h-[1px] bg-gray-600'></div>
         </section>
 
         <section className='h-full flex flex-col z-10 flex-grow items-start overflow-hidden '>
@@ -89,7 +89,7 @@ function homeScreen() {
               <input onChange={(event)=>{
                 setSearchTerm(event.target.value);
               }} 
-              type="search" name="" id="" placeholder='Search movies' className='border border-black border-opacity-70 px-1 rounded-md w-[300px] outline-none' />
+              type="search" name="" id="" placeholder='Search movies' className='border border-black border-opacity-70 px-1 rounded-md w-[300px] outline-none text-black' />
             </div>
 
             <h1 className='text-xl font-Montserrat mt-6 ml-3 font-semibold'>New Releases</h1>
