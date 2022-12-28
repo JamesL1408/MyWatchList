@@ -1,5 +1,5 @@
 MyWatchList
 
-Username : James
+Username : watch
 
-Password : Pass
+Password : list
